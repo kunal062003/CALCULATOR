@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <script>
+        function show1(ref) {
+            ref.value = ref.value + "1";
+        }
+
+        function show2(ref) {
+            ref.value = ref.value + "2";
+        }
+
+        function show3(ref) {
+            ref.value = ref.value + "3";
+        }
+
+        function show4(ref) {
+            ref.value = ref.value + "4";
+        }
+
+        function show5(ref) {
+            ref.value = ref.value + "5";
+        }
+
+        function show6(ref) {
+            ref.value = ref.value + "6";
+        }
+
+        function show7(ref) {
+            ref.value = ref.value + "7";
+        }
+
+        function show8(ref) {
+            ref.value = ref.value + "8";
+        }
+
+        function show9(ref) {
+            ref.value = ref.value + "9";
+        }
+
+        function show0(ref) {
+            ref.value = ref.value + "0";
+        }
+
+        function showDot(ref) {
+            ref.value = ref.value + ".";
+        }
+
+        function showPlus(ref) {
+            ref.value = ref.value + "+"
+        }
+
+        function showMinus(ref) {
+            ref.value = ref.value + "-"
+        }
+
+        function showMulti(ref) {
+            ref.value = ref.value + "*"
+        }
+
+        function showDiv(ref) {
+            ref.value = ref.value + "/"
+        }
+
+        function showMod(ref) {
+            ref.value = ref.value + "%"
+        }
+
+        function showOB(ref) {
+            ref.value = ref.value + "("
+        }
+
+        function showCB(ref) {
+            ref.value = ref.value + ")"
+        }
+        
+        function showEqual(ref) {
+            var res = eval(ref.value);
+            ref.value = res;
+        }
+
+        function doClear(ref){
+            ref.value="";
+        }
+
+        function doBack(ref){
+            var ans = ref.value;
+            ref.value = ans.substr(0, ans.length - 1);
+        }
+
+
+    </script>
+    
+    <style>
+        input{
+            height:50px;
+            width:200px;
+            background-color:darkslategrey;
+            color:#fff;
+            font-size:18px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1> Calculator App</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <table  width="800" border="1">
+            <tr>
+                <td colspan="3">
+                    <input type="text" id="disp" style="width:600px;background-color: #fff; color:black;">
+                </td>
+
+                <td>
+                    <input type="button" value="C" onclick="doClear(disp)">
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" value="1" onclick="show1(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="2" onclick="show2(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="3" onclick="show3(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="/" onclick="showDiv(disp)">
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" value="4" onclick="show4(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="5" onclick="show5(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="6" onclick="show6(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="-" onclick="showMinus(disp)">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" value="7" onclick="show7(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="8" onclick="show8(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="9" onclick="show9(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="+" onclick="showPlus(disp)">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="." onclick="showDot(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="0" onclick="show0(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="=" onclick="showEqual(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="*" onclick="showMulti(disp)">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" value="&lt--" onclick="doBack(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="(" onclick="showOB(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value=")" onclick="showCB(disp)">
+                </td>
+
+                <td>
+                    <input type="button" value="%" onclick="showMod(disp)">
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>
